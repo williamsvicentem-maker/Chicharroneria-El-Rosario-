@@ -15,48 +15,64 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f7f3ed;
+            background: #f7f3ed;
             color: #333;
         }
 
         header {
-            background-color: #7b1e1e;
+            background: #7b1e1e;
             color: white;
             text-align: center;
             padding: 45px 20px;
         }
 
         header h1 {
+            font-size: 40px;
             margin: 0;
-            font-size: 38px;
-        }
-
-        header p {
-            font-size: 18px;
         }
 
         main {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 20px;
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 20px;
         }
 
-        section {
+        .presentacion {
             background: white;
             padding: 25px;
-            margin-bottom: 25px;
             border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
         }
 
-        h2 {
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .plato {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .plato h3 {
             color: #7b1e1e;
         }
 
+        .precio {
+            font-size: 22px;
+            font-weight: bold;
+            color: #b8860b;
+        }
+
         footer {
-            background-color: #333;
+            background: #333;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
         }
 
     </style>
@@ -66,34 +82,73 @@
 
     <header>
         <h1>🍽️ EL ROSARIO</h1>
-        <p>Gastronomía Boliviana - Sabor tradicional</p>
+        <p>Especialidad de la casa - Chicharrón Cochabambino</p>
     </header>
 
     <main>
 
-        <section>
-            <h2>Bienvenidos</h2>
+        <div class="presentacion">
+            <h2>Bienvenidos a El Rosario</h2>
 
             <p>
-                En Restaurante El Rosario disfrutamos compartir
-                los sabores tradicionales de nuestra gastronomía
-                boliviana.
+                Disfruta de nuestros platos tradicionales preparados
+                con sabor y dedicación.
             </p>
-        </section>
+        </div>
 
-        <section>
-            <h2>Nuestro Menú</h2>
+        <h2>Nuestro Menú</h2>
 
-            <ul>
-                <li>Chicharrón Cochabambino</li>
-                <li>Pique Macho</li>
-                <li>Fricasé</li>
-                <li>Chancho a la Caja China</li>
-                <li>K'jaras</li>
-                <li>Planchita</li>
-                <li>Charquekan</li>
-            </ul>
-        </section>
+        <div class="menu">
+
+            <div class="plato">
+                <h3>Chicharrón Cochabambino</h3>
+                <p>Porción personal</p>
+                <p class="precio">40 Bs</p>
+            </div>
+
+            <div class="plato">
+                <h3>Chicharrón Duo</h3>
+                <p>Porción para dos personas</p>
+                <p class="precio">65 Bs</p>
+            </div>
+
+            <div class="plato">
+                <h3>Pique Macho</h3>
+                <p>Plato tradicional boliviano</p>
+                <p class="precio">50 Bs</p>
+            </div>
+
+            <div class="plato">
+                <h3>Fricasé</h3>
+                <p>Fricasé tradicional</p>
+                <p class="precio">20 Bs</p>
+            </div>
+
+            <div class="plato">
+                <h3>Chancho a la Caja China</h3>
+                <p>Especialidad de la casa</p>
+                <p class="precio">50 Bs</p>
+            </div>
+
+            <div class="plato">
+                <h3>K'jaras</h3>
+                <p>Plato tradicional</p>
+                <p class="precio">50 Bs</p>
+            </div>
+
+            <div class="plato">
+                <h3>Planchita</h3>
+                <p>Personal: 80 Bs | Duo: 120 Bs</p>
+                <p class="precio">80 Bs</p>
+            </div>
+
+            <div class="plato">
+                <h3>Charquekan</h3>
+                <p>Plato tradicional</p>
+                <p class="precio">40 Bs</p>
+            </div>
+
+        </div>
 
     </main>
 
