@@ -4,75 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>El Rosario - Restaurante</title>
+    <title>El Rosario | Restaurante</title>
 
     <style>
 
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
             background: #f7f3ed;
             color: #333;
         }
 
         header {
-            background: #7b1e1e;
+            background: linear-gradient(135deg, #7b1e1e, #a52a2a);
             color: white;
             text-align: center;
-            padding: 45px 20px;
+            padding: 70px 20px;
         }
 
         header h1 {
-            font-size: 40px;
-            margin: 0;
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        nav {
+            background: #333;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f0c674;
         }
 
         main {
             max-width: 1100px;
             margin: auto;
-            padding: 30px 20px;
+            padding: 40px 20px;
         }
 
-        .presentacion {
+        .bienvenida {
             background: white;
-            padding: 25px;
+            padding: 35px;
             border-radius: 15px;
-            margin-bottom: 30px;
             text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .bienvenida h2 {
+            color: #7b1e1e;
+            margin-bottom: 15px;
+        }
+
+        .titulo {
+            text-align: center;
+            color: #7b1e1e;
+            margin-bottom: 25px;
         }
 
         .menu {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
         }
 
         .plato {
             background: white;
             padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .plato:hover {
+            transform: translateY(-5px);
         }
 
         .plato h3 {
             color: #7b1e1e;
+            margin-bottom: 10px;
         }
 
         .precio {
-            font-size: 22px;
-            font-weight: bold;
             color: #b8860b;
+            font-size: 23px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .contacto {
+            margin-top: 45px;
+            background: #7b1e1e;
+            color: white;
+            padding: 35px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .contacto h2 {
+            margin-bottom: 15px;
         }
 
         footer {
-            background: #333;
+            background: #222;
             color: white;
             text-align: center;
             padding: 25px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 35px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
         }
 
     </style>
@@ -80,80 +154,133 @@
 
 <body>
 
-    <header>
+    <header id="inicio">
         <h1>🍽️ EL ROSARIO</h1>
-        <p>Especialidad de la casa - Chicharrón Cochabambino</p>
+        <p>Gastronomía Boliviana • Sabor tradicional</p>
     </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
 
     <main>
 
-        <div class="presentacion">
-            <h2>Bienvenidos a El Rosario</h2>
+        <section class="bienvenida">
+
+            <h2>Bienvenidos a Restaurante El Rosario</h2>
 
             <p>
-                Disfruta de nuestros platos tradicionales preparados
-                con sabor y dedicación.
+                Somos un restaurante dedicado a ofrecer lo mejor
+                de la gastronomía boliviana. Nuestra especialidad
+                es el delicioso Chicharrón Cochabambino.
             </p>
-        </div>
 
-        <h2>Nuestro Menú</h2>
+            <br>
 
-        <div class="menu">
+            <p>
+                Ven y disfruta de nuestros sabores tradicionales
+                en un ambiente agradable para compartir en familia
+                y con amigos.
+            </p>
 
-            <div class="plato">
-                <h3>Chicharrón Cochabambino</h3>
-                <p>Porción personal</p>
-                <p class="precio">40 Bs</p>
+        </section>
+
+        <section id="menu">
+
+            <h2 class="titulo">Nuestro Menú</h2>
+
+            <div class="menu">
+
+                <div class="plato">
+                    <h3>🥩 Chicharrón Cochabambino</h3>
+                    <p>Porción personal.</p>
+                    <p class="precio">40 Bs</p>
+                </div>
+
+                <div class="plato">
+                    <h3>🍖 Chicharrón Duo</h3>
+                    <p>Porción especial para dos personas.</p>
+                    <p class="precio">65 Bs</p>
+                </div>
+
+                <div class="plato">
+                    <h3>🍟 Pique Macho</h3>
+                    <p>Un clásico de la gastronomía boliviana.</p>
+                    <p class="precio">50 Bs</p>
+                </div>
+
+                <div class="plato">
+                    <h3>🍲 Fricasé</h3>
+                    <p>Fricasé tradicional.</p>
+                    <p class="precio">20 Bs</p>
+                </div>
+
+                <div class="plato">
+                    <h3>🐷 Chancho a la Caja China</h3>
+                    <p>Una de nuestras especialidades.</p>
+                    <p class="precio">50 Bs</p>
+                </div>
+
+                <div class="plato">
+                    <h3>🔥 K'jaras</h3>
+                    <p>Plato tradicional lleno de sabor.</p>
+                    <p class="precio">50 Bs</p>
+                </div>
+
+                <div class="plato">
+                    <h3>🍽️ Planchita</h3>
+                    <p>Personal: 80 Bs | Duo: 120 Bs.</p>
+                    <p class="precio">80 Bs</p>
+                </div>
+
+                <div class="plato">
+                    <h3>🥘 Charquekan</h3>
+                    <p>Plato tradicional boliviano.</p>
+                    <p class="precio">40 Bs</p>
+                </div>
+
             </div>
 
-            <div class="plato">
-                <h3>Chicharrón Duo</h3>
-                <p>Porción para dos personas</p>
-                <p class="precio">65 Bs</p>
-            </div>
+        </section>
 
-            <div class="plato">
-                <h3>Pique Macho</h3>
-                <p>Plato tradicional boliviano</p>
-                <p class="precio">50 Bs</p>
-            </div>
+        <section class="contacto" id="contacto">
 
-            <div class="plato">
-                <h3>Fricasé</h3>
-                <p>Fricasé tradicional</p>
-                <p class="precio">20 Bs</p>
-            </div>
+            <h2>📍 Visítanos</h2>
 
-            <div class="plato">
-                <h3>Chancho a la Caja China</h3>
-                <p>Especialidad de la casa</p>
-                <p class="precio">50 Bs</p>
-            </div>
+            <p>
+                Restaurante El Rosario
+            </p>
 
-            <div class="plato">
-                <h3>K'jaras</h3>
-                <p>Plato tradicional</p>
-                <p class="precio">50 Bs</p>
-            </div>
+            <p>
+                Gastronomía boliviana y especialidades de la casa.
+            </p>
 
-            <div class="plato">
-                <h3>Planchita</h3>
-                <p>Personal: 80 Bs | Duo: 120 Bs</p>
-                <p class="precio">80 Bs</p>
-            </div>
+            <br>
 
-            <div class="plato">
-                <h3>Charquekan</h3>
-                <p>Plato tradicional</p>
-                <p class="precio">40 Bs</p>
-            </div>
+            <p>
+                🕐 Atención: Lunes a Domingo
+            </p>
 
-        </div>
+            <p>
+                📞 Reservas y consultas: Contáctanos
+            </p>
+
+        </section>
 
     </main>
 
     <footer>
-        <p>© 2026 Restaurante El Rosario</p>
+
+        <p>
+            © 2026 Restaurante El Rosario
+        </p>
+
+        <p>
+            Proyecto académico - Tecnologías Emergentes II
+        </p>
+
     </footer>
 
 </body>
